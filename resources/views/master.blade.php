@@ -12,16 +12,7 @@
 <body>
 
 <div class="container">
-    <header>
-        <h2>Blog Mawar Kumala</h2>
-        <nav>
-            <a href="/blog">HOME</a>
-            |
-            <a href="/blog/tentang">TENTANG</a>
-            |
-            <a href="/blog/kontak">KONTAK</a>
-        </nav>
-    </header>
+
     <hr/>
     <br/>
     @yield('judul')
