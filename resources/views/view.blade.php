@@ -1,36 +1,30 @@
 @extends('master2')
-@section('judulhalaman','Data Pegawai')
+@section('judulhalaman', 'View Pegawai')
 
 @section('konten')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Data Pegawai</h3>
+<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
+<h3 class="text-conter">View Pegawai</h3>
+<div class="container align-center">
+    <div class="row bg-light d-flex align-item-center justify-content-center">
+        <div class="col-2 d-flex justify-content-center m-3" style="border-style: solid">
 
-	<a href="/pegawai"> Kembali</a>
-
-	<br/>
-	<br/>
-
-	<form action="/pegawai/store" method="post" class="form-horizontal">
-		{{ csrf_field() }}
-        <div class="form-group row">
-            <label for="nama" class="col-xs-3 col-form-label mr-2">Nama</label>
-            <div class="col-xs-9">
-            <input type="text" class="form-control" id="nama" name="nama">
-            </div>
         </div>
-        <div class="form-group row">
-            <label for="jabatan" class="col-xs-3 col-form-label mr-2">Jabatan</label>
-            <div class="col-xs-9">
-            <input type="text" class="form-control" id="jabatan" name="jabatan">
-            </div>
-        </div>
-		Nama <input type="text" name="nama"> <br/>
-		Jabatan <input type="text" name="jabatan"> <br/>
-		Umur <input type="number" name="umur"> <br/>
-		Alamat <textarea name="alamat"></textarea> <br/>
-		<input type="submit" value="Simpan Data" class="btn btn-primary">
-	</form>
+    <div class="col-8 d-flex flex-column m-3">
+    @foreach($pegawai as $p)
+            <input type="hidden" name="id" value="{{ $p->pegawai_id }}">
+            <p>Nama: {{ $p->pegawai_nama }}</p>
+            <p>Jabatan: {{ $p->pegawai_jabatan }}</p>
+            <p>Umur: {{ $p->pegawai_umur }}</p>
+            <p>Alamat: {{ $p->pegawai_alamat }}</p>
+    <div class ="d-flex justify-content-between align-item-center">
+            <a href="/pegawai" class="btn btn-info">Kembali</a>
+    </div>
+     @endforeach
 
+
+
+    </div>
+    </div>
+</div>
 @endsection
-
