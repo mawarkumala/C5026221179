@@ -109,3 +109,15 @@ Route::post('/sirup/update','App\Http\Controllers\SirupController@update');
 Route::get('/sirup/hapus/{id}','App\Http\Controllers\SirupController@hapus');
 Route::get('/sirup/cari','App\Http\Controllers\SirupController@cari');
 Route::get('/sirup/viewsirup/{id}','App\Http\Controllers\SirupController@viewsirup');
+
+Route::get('/karyawan','App\Http\Controllers\KaryawanController@indexkaryawan');
+Route::get('/karyawan/tambahkaryawan','App\Http\Controllers\KaryawanController@tambahkaryawan');
+Route::post('/karyawan/store','App\Http\Controllers\KaryawanController@store');
+Route::get('/karyawan/editkaryawan/{id}','App\Http\Controllers\KaryawanController@editkaryawan');
+Route::post('/karyawan/update','App\Http\Controllers\KaryawanController@update');
+Route::get('/karyawan/hapus/{id}','App\Http\Controllers\KaryawanController@hapus');
+Route::get('/karyawan/cari','App\Http\Controllers\KaryawanController@cari');
+Route::get('/karyawan/viewkaryawan/{id}','App\Http\Controllers\KaryawanController@viewkaryawan');
+
+
+Route::get('/counter', 'App\Http\Controllers\CounterController@indexcounter');
