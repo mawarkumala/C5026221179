@@ -121,3 +121,7 @@ Route::get('/karyawan/viewkaryawan/{id}','App\Http\Controllers\KaryawanControlle
 
 
 Route::get('/counter', 'App\Http\Controllers\CounterController@indexcounter');
+
+
+Route::get('/chat', 'App\Http\Controllers\ChatController@index');
+

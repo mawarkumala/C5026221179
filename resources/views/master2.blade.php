@@ -34,6 +34,7 @@
               <a class="dropdown-item" href="/nilaikuliah">Nilai Kuliah</a>
               <a class="dropdown-item" href="/sirup">Sirup</a>
               <a class="dropdown-item" href="/karyawan">Karyawan</a>
+              <a class="dropdown-item" href="/chat">Chat</a>
             </div>
           </li>
         </ul>
