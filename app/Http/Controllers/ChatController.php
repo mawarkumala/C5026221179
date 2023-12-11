@@ -27,7 +27,13 @@ class ChatController extends Controller
 
         // Replace emoticon with image tag using asset function
         foreach ($emoticons as $emoticon => $imageName) {
-            $text = str_replace($emoticon, "<img src='" . asset("images/$imageName") . "' alt='$emoticon'>", $text);
+
+            $text = str_replace(
+                $emoticon,
+                "<img src='" . asset('' . $imageName) . "' alt='$emoticon' style='width:24px; height:24px;' />",
+                $text
+            );
+
         }
 
         return $text;

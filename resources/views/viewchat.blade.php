@@ -17,7 +17,6 @@
             style=" background-color: #ffffff; border: 1px solid #a8acaa;
                     border-radius: .25rem; padding: 1.25rem; margin-bottom: 1rem ">
                 {!! $message->pesan !!}
-
             </div>
         @endforeach
     </div>
